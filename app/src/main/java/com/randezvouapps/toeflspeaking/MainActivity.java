@@ -9,7 +9,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.TextView;
+import android.widget.ToggleButton;
 
 import java.util.Timer;
 
@@ -43,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
         mTimerView              = (TextView) findViewById(R.id.timer_tv);
         Button mStartStop_btn   = (Button) findViewById(R.id.start_stop_btn);
         Button mNext_btn        = (Button) findViewById(R.id.next_btn);
+        ToggleButton mBeepTgl   = (ToggleButton) findViewById(R.id.beep_tgl_btn);
 
         /*************************************************************
          *  Setup Events                                             *
@@ -64,6 +67,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        mBeepTgl.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                mExam.setBeepEnable(isChecked);
+            }
+        });
+
         /*************************************************************
          * Implementation                                            *
          *************************************************************/
@@ -72,6 +82,7 @@ public class MainActivity extends AppCompatActivity {
         mExam.loadQuestions(question_list);
         mExam.setHandler(mHandler);
         mExam.setTextView(mTimerView);
+        mExam.setBeepEnable(true);
 
         mExamTimer.schedule(mExam, 0, 100);
 

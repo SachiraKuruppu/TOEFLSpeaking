@@ -24,6 +24,7 @@
             android:layout_marginTop="@dimen/activity_vertical_margin"
             android:text="@string/title_home"
             android:textAlignment="viewStart"
+            android:textColor="@android:color/black"
             android:textSize="24sp"
             android:textStyle="bold" />
 
@@ -50,8 +51,19 @@
             android:layout_gravity="center_vertical|center"
             android:text="00"
             android:textAlignment="center"
+            android:textColor="@android:color/black"
             android:textSize="30sp"
             android:textStyle="bold" />
+
+        <ToggleButton
+            android:id="@+id/beep_tgl_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center"
+            android:checked="true"
+            android:text="Beep"
+            android:textOff="Beep off"
+            android:textOn="Beep ON" />
 
     </FrameLayout>
 

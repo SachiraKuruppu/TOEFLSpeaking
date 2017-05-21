@@ -8,6 +8,8 @@ package com.randezvouapps.toeflspeaking;
  * speaking time
  */
 
+import android.media.AudioManager;
+import android.media.ToneGenerator;
 import android.os.Handler;
 import android.widget.TextView;
 
@@ -22,18 +24,21 @@ import java.util.TimerTask;
 public class Exam extends TimerTask{
     private static final Exam INSTANCE = new Exam();
 
-    public boolean isStopped;
+    public boolean          isStopped;
 
-    private String[]    mQuestions;
-    private boolean[]   mDone;
-    private Random      m_rand;
-    private Date        mTime;
-    private int         m_millis;
-    private int         m_Elapsed;
-    private int         mCount;
+    private boolean         en_beep;
 
-    private Handler     mHandler;
-    private TextView    mTimerView;
+    private String[]        mQuestions;
+    private boolean[]       mDone;
+    private Random          m_rand;
+    private Date            mTime;
+    private int             m_millis;
+    private int             m_Elapsed;
+    private int             mCount;
+
+    private Handler         mHandler;
+    private TextView        mTimerView;
+    private ToneGenerator   mToneGen;
 
     private enum STATE {
         STATE_NOP,
@@ -42,8 +47,8 @@ public class Exam extends TimerTask{
         STATE_SPEAK
     }
 
-    STATE               mSTATE;
-    STATE               mPreState;
+    STATE                   mSTATE;
+    STATE                   mPreState;
 
     private Exam () {
         super();
@@ -52,7 +57,10 @@ public class Exam extends TimerTask{
         this.m_rand     = new Random();
         this.m_millis   = 0;
         this.isStopped  = true;
+        this.en_beep    = true;
         this.mCount     = 0;    // Number of questions displayed so far
+
+        mToneGen        = new ToneGenerator(AudioManager.STREAM_MUSIC, 100);
     }
 
     public static Exam getInstance () {
@@ -70,6 +78,10 @@ public class Exam extends TimerTask{
 
     public void setTextView (TextView textview) {
         this.mTimerView = textview;
+    }
+
+    public void setBeepEnable (boolean enable) {
+        this.en_beep = enable;
     }
 
     public String showQuestion () {
@@ -112,14 +124,18 @@ public class Exam extends TimerTask{
             case STATE_PREPARE:
                 m_Elapsed = 15 - (m_millis / 1000);
 
-                if (m_Elapsed <= 0)
+                if (m_Elapsed <= 0) {
                     mSTATE = STATE.STATE_SPEAK;
+                    beep();
+                }
                 break;
             case STATE_SPEAK:
                 m_Elapsed = 60 - (m_millis / 1000);
 
-                if (m_Elapsed <= 0)
+                if (m_Elapsed <= 0) {
                     mSTATE = STATE.STATE_IDLE;
+                    beep();
+                }
                 break;
             case STATE_IDLE:
                 mTime = new Date();
@@ -143,5 +159,12 @@ public class Exam extends TimerTask{
                 mTimerView.setText(text);
             }
         });
+    }
+
+    private void beep () {
+        if (!this.en_beep)
+            return;
+
+        mToneGen.startTone(ToneGenerator.TONE_DTMF_C, 300);
     }
 }
