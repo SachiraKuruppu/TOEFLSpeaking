@@ -1,0 +1,60 @@
+<resources>
+    <string name="app_name">TOEFL Speaking</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+
+    <string-array name="question_list">
+        <item>Should a person shower the night before work or in the morning?</item>
+        <item>When a man takes a woman to dinner, should he pay or should they go "dutch"? (Each pays for him/herself.)</item>
+        <item>Do you prefer reading e-books or real books?</item>
+        <item>Describe something you do during your favorite seaso.</item>
+        <item>Which is better to lose weight: dieting or exercising?</item>
+        <item>Which is better for a history class: online or classroom learning?</item>
+        <item>Which is the best month for a holiday?</item>
+        <item>What is good advice for a person who is having trouble falling asleep?</item>
+        <item>Now that you are in America, should you keep your foreign name or adopt an American name?</item>
+        <item>When you are in a Chinese restaurant, do you use chopsticks or a fork? Why?</item>
+        <item>Which is better for you, texting someone or calling him/her?</item>
+        <item>Some people think there should be a tax on soda to encourage people to stop drinking it.  Agree or disagree?</item>
+        <item>Do you agree:  You should always give a waitress a tip even if her service is bad?</item>
+        <item>In an airport do you prefer to go through the body scanner or to be "frisked"? (The security guard runs his/her hands over your body.)</item>
+        <item>What\'s the worst place to take a tourist in your current city?</item>
+        <item>What\'s the most stupid holiday you can think of?</item>
+        <item>What was the most important time in your life?</item>
+        <item>If you were in Spain and someone gave you tickets to a bullfight, would you go?</item>
+        <item>Do you think it is important to use capital letters in e-mail messages or is it OK to just use small letters?</item>
+        <item>Should cell phones be prohibited in schools?</item>
+        <item>Should bullying be a crime?</item>
+        <item>Should you give money to people begging in the street or on the subway?</item>
+        <item>Should we have shorter work weeks and longer hours (i.e. 4 days at 10 hours each day)?</item>
+        <item>Would you prefer to go to an art museum or a movie?</item>
+        <item>If you were convicted of a murder, would you prefer the death sentence or life in prison?</item>
+        <item>Is it better to save your money or to spend it as soon as you get it?</item>
+        <item>Do you prefer the white meat of a chicken or the dark meat?</item>
+        <item>Should people be of the same religion when they get married?</item>
+        <item>Is it better to wake up early in the morning or later in the day?</item>
+        <item>Do you believe pet animals should be cloned?</item>
+        <item>Should parents be allowed to choose the sex of their child ahead of time?</item>
+        <item>Should marijuana be legalized?</item>
+        <item>Do you think zoos are generally good or bad?</item>
+        <item>In Mexico there are "pink" taxis, only for women driven by women.  Is this good or bad?</item>
+        <item>Should really fat (obese) people have to pay more for their plane tickets because they use up more fuel?</item>
+        <item>An airline had a somewhat abstract painting by Picasso of a nude woman on a wall at an airport and some people complained that it should be taken down.  What do you think?</item>
+        <item>Describe the worst teacher you ever ha.</item>
+        <item>Describe your morning routin.</item>
+        <item>Are you more like your mother or father in personality?</item>
+        <item>Describe the last fashionable piece of clothing you bough.</item>
+        <item>Is it good or bad that English is becoming the world language?</item>
+        <item>Are tourists generally good or bad for a city?</item>
+        <item>What should you do if your roommate is very noisy and keeps you up at night?</item>
+        <item>What are the advantages and disadvantages of having a smart phone?</item>
+        <item>What are some of the advantages and disadvantages of studying literature as a major in college?</item>
+        <item>What are the advantages and disadvantages of learning English in the USA?</item>
+        <item>What are the advantages and disadvantages of attending a US graduate program?</item>
+        <item>What are the advantages and disadvantages of doing volunteer work?</item>
+        <item>What are the advantages and disadvantages of owning a dog?</item>
+        <item>What are the advantages and disadvantages of just having one very close friend?</item>
+    </string-array>
+
+</resources>
