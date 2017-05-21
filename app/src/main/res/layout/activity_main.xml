@@ -23,26 +23,17 @@
             android:layout_marginRight="@dimen/activity_horizontal_margin"
             android:layout_marginTop="@dimen/activity_vertical_margin"
             android:text="@string/title_home"
-            android:textAlignment="viewStart"
             android:textColor="@android:color/black"
             android:textSize="24sp"
             android:textStyle="bold" />
 
         <Button
-            android:id="@+id/start_stop_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Start/Stop"
-            android:visibility="visible"
-            android:layout_gravity="bottom|left"/>
-
-        <Button
             android:id="@+id/next_btn"
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="Next"
             android:visibility="visible"
-            android:layout_gravity="bottom|right"/>
+            android:layout_gravity="bottom|center"/>
 
         <TextView
             android:id="@+id/timer_tv"
@@ -54,16 +45,6 @@
             android:textColor="@android:color/black"
             android:textSize="30sp"
             android:textStyle="bold" />
-
-        <ToggleButton
-            android:id="@+id/beep_tgl_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|center"
-            android:checked="true"
-            android:text="Beep"
-            android:textOff="Beep off"
-            android:textOn="Beep ON" />
 
     </FrameLayout>
 
